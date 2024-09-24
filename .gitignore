@@ -1,0 +1,49 @@
+# Eclipse-specific files
+.project
+.classpath
+.settings/
+
+# EMF-generated code and files
+model/*.genmodel
+model/*.ecorediag
+*.ecore_diagram
+
+# Ignore Java build files
+bin/
+gen/
+*.class
+*.jar
+*.war
+
+# Maven-related (if using Maven for the project)
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Ignore build artifacts from Gradle (if using Gradle)
+.gradle/
+build/
+
+# Eclipse IDE configuration
+.metadata/
+.remote/
+
+# Temp files
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+
+# Node.js dependencies (if you're using Node.js/JavaScript tools in your project)
+node_modules/
+
+# Mac-specific
+.DS_Store
+
+# Windows-specific
+Thumbs.db
+desktop.ini
