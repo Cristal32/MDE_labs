@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SQL:DB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:SQL="https://cristal-sql.ma" xmi:id="_y8WOMH_9Ee-MM9qIrg48UQ" name="euro2015">
+  <tables xmi:id="_0i8YkH_9Ee-MM9qIrg48UQ" name="Coaches">
+    <columns xmi:id="_30UCsH_9Ee-MM9qIrg48UQ" name="Name" type="String"/>
+  </tables>
+</SQL:DB>

@@ -21,6 +21,8 @@ The goal of these initial exercises is to get familiar with the tools provided b
 - [Validating the Ecore model](#validating-the-ecore-model)
 - [Constructing the Ecore metamodel](#constructing-the-ecore-metamodel)
 - [Generate the Java code and the arborescent editor](#generate-the-java-code-and-the-arborescent-editor)
+    - [Create the .genmodel file](#create-the-genmodel-file)
+    - [Generate the 3 plugins](#generate-the-3-plugins)
 - [Use the arborescent editor](#use-the-arborescent-editor)
 - [Creating the XML metamodel](#creating-the-xml-metamodel)
 - [Creating the SQL text editor](#creating-the-sql-metamodel)
@@ -43,9 +45,12 @@ The goal of these initial exercises is to get familiar with the tools provided b
 
 ### Starting off with SQL.ecore
 
-1. Create the Ecore file:
+The `.ecore` file serves as the `core metamodel` that defines the structure, semantics and constraints of our models.
+
+1. Create the Ecore file: <br>
 Right click model > New > Other > Ecore model > File name: 'SQL.ecore' 
-2. When clicking on the file 'SQL.ecore', you can see an arborescence starting with an empty package. Click on that empty package and fill out its name (SQL), Prefix (SQL) and URI (ex. https://...)
+2. In 'SQL.ecore', you can see an arborescence starting with an empty package. Click on that empty package and fill out its name (SQL), Prefix (SQL) and URI (ex. https://...)
+The URI will be useful later on when we want to reference our specific .ecore file
 3. Start creating EClasses, EAttributes, EReferences, ... in the arborescence to correspond to your designed model
     - ex. Right-click the package 'SQL' > New child > EClass
 
@@ -61,6 +66,7 @@ Right click model > New > Other > Ecore model > File name: 'SQL.ecore'
 - Table
     - ESuper Types: NamedElmt
     - EReference: columns
+        - Containment: true
         - EType: Column
         - EOpposite: Table
         - Upper Bound: -1
@@ -94,14 +100,45 @@ Right click model > New > Other > Ecore model > File name: 'SQL.ecore'
 - In 'SQL.ecore', right-click the root of the ecore model (arborescence)
 - Select 'Validate'
 
-From this, 3 new projects are generated:
-- `.model project`: Contains the Ecore model itself and the generated code that corresponds to the metamodel
-- `.edit project`: Provides editing support for the model. It contains generated code to build an item provider that allows you to view and edit instances of the model. Used by UI tools.
-- `.editor project`: Contains a basic editor generated for the model, integrated into Eclipse.
+We can enable `live validation` (by right clicking the root of the arborescence) to check the validation of the arborescence before selecting validate.
 
 ## Constructing the Ecore metamodel
 
 ## Generate the Java code and the arborescent editor
+
+### Create the .genmodel file
+
+`GenModel` represents the EMF model in a higher level form. Generates Java code that can implement the model's structure
+
+Right click SQL.ecore > New > Other > Eclipse Modeling Framework > EMF Generator Model > Filename: "SQL.genmodel" > EcoreModel > Next > Load > Finish 
+
+### Generate the 3 plugins
+
+In SQL.genmodel: <br>
+Right click the root of the arborescence > Generate All 
+
+From this, 3 new layers of code (plugins) are generated:
+<p align=center>
+    <img width="400px" src="../assets/generated_plugins.PNG" alt="Generated plugins" />
+</p>
+
+- `IDM.model`: Contains the Ecore model itself and the generated code that corresponds to the metamodel.
+- `IDM.edit`: Provides editing support for the model. It contains generated code to build an item provider that allows us to view and edit instances of the model. These classes provide content and label information for our model objects, facilitating their representation in UI components like trees and tables.
+- `IDM.editor`: A basic graphical user interface (GUI) is created, allowing users to view, create, edit, and delete instances of your model. It leverages the generated model and edit code to provide a functional UI out of the box.
+
+### Epsilon
+
+Alternatively, instead of having to generate every time whenever we make a change in the ecore file, we can install the package `epsilon`, which allows us to have a view of the resulting instance before generating. 
+
+1. Right click SQL.ecore > Register EPackages
+2. Right click SQL.ecore > Epsilon > EMF Model
+3. EMF model:
+    - **File name: SQL.model
+    - Metamodel URI > Browse > write "*sql" and select your ecore URI
+    - Root instance type: Choose whichever root you want, for example DB 
+4. You can now test it out directly
+
+Now whenever we make a change in the ecore, we can simply repeat step 1
 
 ## Use the arborescent editor
 

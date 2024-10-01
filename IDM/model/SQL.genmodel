@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/IDM/src" modelPluginID="IDM" modelName="SQL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>SQL.ecore</foreignModel>
+  <genPackages prefix="SQL" disposableProviderFactory="true" ecorePackage="SQL.ecore#/">
+    <genClasses ecoreClass="SQL.ecore#//DB">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SQL.ecore#//DB/tables"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SQL.ecore#//NamedElmt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SQL.ecore#//NamedElmt/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SQL.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SQL.ecore#//Table/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="SQL.ecore#//Column">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SQL.ecore#//Column/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SQL.ecore#//Column/table"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
