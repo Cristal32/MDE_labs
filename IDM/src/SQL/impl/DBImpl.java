@@ -14,8 +14,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -68,9 +67,24 @@ public class DBImpl extends NamedElmtImpl implements DB {
 	 */
 	public EList<Table> getTables() {
 		if (tables == null) {
-			tables = new EObjectContainmentEList<Table>(Table.class, this, SQLPackage.DB__TABLES);
+			tables = new EObjectContainmentWithInverseEList<Table>(Table.class, this, SQLPackage.DB__TABLES, SQLPackage.TABLE__DB);
 		}
 		return tables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SQLPackage.DB__TABLES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTables()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

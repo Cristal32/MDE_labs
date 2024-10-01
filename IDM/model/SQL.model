@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
-<SQL:DB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:SQL="https://cristal-sql.ma" xmi:id="_y8WOMH_9Ee-MM9qIrg48UQ" name="euro2015">
-  <tables xmi:id="_0i8YkH_9Ee-MM9qIrg48UQ" name="Coaches">
-    <columns xmi:id="_30UCsH_9Ee-MM9qIrg48UQ" name="Name" type="String"/>
+<SQL:DB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:SQL="https://cristal-sql.ma" xmi:id="_bHR1gIAIEe-VL5Gbfk-K8A" name="Euro2015">
+  <tables xmi:id="_fGF0cIAIEe-VL5Gbfk-K8A" name="Coaches">
+    <columns xmi:id="_hJAucIAIEe-VL5Gbfk-K8A" name="name" type="String"/>
+    <columns xmi:id="_pCmg4IAIEe-VL5Gbfk-K8A" name="birth_date" type="Date"/>
+    <columns xmi:id="_tPIywIAIEe-VL5Gbfk-K8A" name="photo" type="String"/>
   </tables>
 </SQL:DB>

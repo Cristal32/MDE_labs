@@ -168,13 +168,22 @@ public interface SQLPackage extends EPackage {
 	int TABLE__COLUMNS = NAMED_ELMT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Db</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__DB = NAMED_ELMT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = NAMED_ELMT_FEATURE_COUNT + 1;
+	int TABLE_FEATURE_COUNT = NAMED_ELMT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Table</em>' class.
@@ -214,7 +223,7 @@ public interface SQLPackage extends EPackage {
 	int COLUMN__TYPE = NAMED_ELMT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference.
+	 * The feature id for the '<em><b>Table</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -305,6 +314,17 @@ public interface SQLPackage extends EPackage {
 	EReference getTable_Columns();
 
 	/**
+	 * Returns the meta object for the container reference '{@link SQL.Table#getDb <em>Db</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Db</em>'.
+	 * @see SQL.Table#getDb()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_Db();
+
+	/**
 	 * Returns the meta object for class '{@link SQL.Column <em>Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -326,10 +346,10 @@ public interface SQLPackage extends EPackage {
 	EAttribute getColumn_Type();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link SQL.Column#getTable <em>Table</em>}'.
+	 * Returns the meta object for the container reference '{@link SQL.Column#getTable <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Table</em>'.
+	 * @return the meta object for the container reference '<em>Table</em>'.
 	 * @see SQL.Column#getTable()
 	 * @see #getColumn()
 	 * @generated
@@ -414,6 +434,14 @@ public interface SQLPackage extends EPackage {
 		EReference TABLE__COLUMNS = eINSTANCE.getTable_Columns();
 
 		/**
+		 * The meta object literal for the '<em><b>Db</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__DB = eINSTANCE.getTable_Db();
+
+		/**
 		 * The meta object literal for the '{@link SQL.impl.ColumnImpl <em>Column</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -432,7 +460,7 @@ public interface SQLPackage extends EPackage {
 		EAttribute COLUMN__TYPE = eINSTANCE.getColumn_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Table</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Table</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

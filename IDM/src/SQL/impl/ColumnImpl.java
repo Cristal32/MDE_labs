@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,16 +49,6 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getTable() <em>Table</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTable()
-	 * @generated
-	 * @ordered
-	 */
-	protected Table table;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,7 +96,8 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * @generated
 	 */
 	public Table getTable() {
-		return table;
+		if (eContainerFeatureID() != SQLPackage.COLUMN__TABLE) return null;
+		return (Table)eInternalContainer();
 	}
 
 	/**
@@ -114,12 +106,7 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * @generated
 	 */
 	public NotificationChain basicSetTable(Table newTable, NotificationChain msgs) {
-		Table oldTable = table;
-		table = newTable;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SQLPackage.COLUMN__TABLE, oldTable, newTable);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject)newTable, SQLPackage.COLUMN__TABLE, msgs);
 		return msgs;
 	}
 
@@ -129,17 +116,35 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * @generated
 	 */
 	public void setTable(Table newTable) {
-		if (newTable != table) {
+		if (newTable != eInternalContainer() || (eContainerFeatureID() != SQLPackage.COLUMN__TABLE && newTable != null)) {
+			if (EcoreUtil.isAncestor(this, newTable))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (table != null)
-				msgs = ((InternalEObject)table).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SQLPackage.COLUMN__TABLE, null, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newTable != null)
-				msgs = ((InternalEObject)newTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SQLPackage.COLUMN__TABLE, null, msgs);
+				msgs = ((InternalEObject)newTable).eInverseAdd(this, SQLPackage.TABLE__COLUMNS, Table.class, msgs);
 			msgs = basicSetTable(newTable, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SQLPackage.COLUMN__TABLE, newTable, newTable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case SQLPackage.COLUMN__TABLE:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetTable((Table)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -154,6 +159,20 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 				return basicSetTable(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case SQLPackage.COLUMN__TABLE:
+				return eInternalContainer().eInverseRemove(this, SQLPackage.TABLE__COLUMNS, Table.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -219,7 +238,7 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 			case SQLPackage.COLUMN__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case SQLPackage.COLUMN__TABLE:
-				return table != null;
+				return getTable() != null;
 		}
 		return super.eIsSet(featureID);
 	}

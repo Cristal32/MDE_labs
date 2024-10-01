@@ -13,10 +13,11 @@
     </genClasses>
     <genClasses ecoreClass="SQL.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SQL.ecore#//Table/columns"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference SQL.ecore#//Table/db"/>
     </genClasses>
     <genClasses ecoreClass="SQL.ecore#//Column">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SQL.ecore#//Column/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SQL.ecore#//Column/table"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference SQL.ecore#//Column/table"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

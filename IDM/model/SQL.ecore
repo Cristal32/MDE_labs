@@ -3,18 +3,20 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SQL" nsURI="https://cristal-sql.ma" nsPrefix="SQL">
   <eClassifiers xsi:type="ecore:EClass" name="DB" eSuperTypes="#//NamedElmt">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1"
-        eType="#//Table" containment="true"/>
+        eType="#//Table" containment="true" eOpposite="#//Table/db"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElmt" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//NamedElmt">
     <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
-        eType="#//Column" containment="true"/>
+        eType="#//Column" containment="true" eOpposite="#//Column/table"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="db" lowerBound="1" eType="#//DB"
+        eOpposite="#//DB/tables"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Column" eSuperTypes="#//NamedElmt">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="table" lowerBound="1" eType="#//Table"
-        containment="true"/>
+        eOpposite="#//Table/columns"/>
   </eClassifiers>
 </ecore:EPackage>

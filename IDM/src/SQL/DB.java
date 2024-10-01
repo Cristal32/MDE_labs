@@ -24,11 +24,13 @@ public interface DB extends NamedElmt {
 	/**
 	 * Returns the value of the '<em><b>Tables</b></em>' containment reference list.
 	 * The list contents are of type {@link SQL.Table}.
+	 * It is bidirectional and its opposite is '{@link SQL.Table#getDb <em>Db</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tables</em>' containment reference list.
 	 * @see SQL.SQLPackage#getDB_Tables()
-	 * @model containment="true"
+	 * @see SQL.Table#getDb
+	 * @model opposite="db" containment="true"
 	 * @generated
 	 */
 	EList<Table> getTables();

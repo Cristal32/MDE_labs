@@ -31,7 +31,7 @@ The goal of these initial exercises is to get familiar with the tools provided b
 
 <p align=center>
     <img width="200px" src="../assets/ecore_arborescence.PNG" alt="Ecore arborescence" />
-    <img width="400px" src="../assets/ecore_diagram.PNG" alt="Ecore arborescence" />
+    <img width="310px" src="../assets/ecore_diagram.PNG" alt="Ecore arborescence" />
 </p>
 
 ## Setup
@@ -70,6 +70,11 @@ The URI will be useful later on when we want to reference our specific .ecore fi
         - EType: Column
         - EOpposite: Table
         - Upper Bound: -1
+    - EReference: db
+        - EType: DB
+        - EOpposite: tables: Table
+        - Lower Bound: 1
+        - Upper Bound: 1
 
 - Column: 
     - ESuper Types: NamedElmt
@@ -77,9 +82,9 @@ The URI will be useful later on when we want to reference our specific .ecore fi
         - EAttribute Type: EString
     - EReference: table
         - EType: Table
-        - EOpposite: Table
+        - EOpposite: columns: Column
         - Lower Bound: 1
-        - Upper Bound: -1
+        - Upper Bound: 1
 
 - NamedElmt: 
     - Abstract: true
@@ -133,12 +138,17 @@ Alternatively, instead of having to generate every time whenever we make a chang
 1. Right click SQL.ecore > Register EPackages
 2. Right click SQL.ecore > Epsilon > EMF Model
 3. EMF model:
-    - **File name: SQL.model
-    - Metamodel URI > Browse > write "*sql" and select your ecore URI
+    - File name: SQL.model
+    - Metamodel URI > Browse > select your ecore URI
     - Root instance type: Choose whichever root you want, for example DB 
 4. You can now test it out directly
 
 Now whenever we make a change in the ecore, we can simply repeat step 1
+
+We can then start filling out an example of the model:
+<p align=center>
+    <img width="300px" src="../assets/model_res.PNG" alt="Example of the model" />
+</p>
 
 ## Use the arborescent editor
 
