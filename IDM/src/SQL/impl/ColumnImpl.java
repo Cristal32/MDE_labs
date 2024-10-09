@@ -74,6 +74,7 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getType() {
 		return type;
 	}
@@ -83,6 +84,7 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(String newType) {
 		String oldType = type;
 		type = newType;
@@ -95,6 +97,7 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Table getTable() {
 		if (eContainerFeatureID() != SQLPackage.COLUMN__TABLE) return null;
 		return (Table)eInternalContainer();
@@ -115,6 +118,7 @@ public class ColumnImpl extends NamedElmtImpl implements Column {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTable(Table newTable) {
 		if (newTable != eInternalContainer() || (eContainerFeatureID() != SQLPackage.COLUMN__TABLE && newTable != null)) {
 			if (EcoreUtil.isAncestor(this, newTable))

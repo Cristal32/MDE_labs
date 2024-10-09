@@ -152,6 +152,22 @@ We can then start filling out an example of the model:
 
 ## Use the arborescent editor
 
+**Side Note**: An issue I encountered in this step, is at the start whenever I wanted to create a new SQL model, I encountered this error:
+```
+The selected wizard could not be started.
+Plug-in IDM.editor was unable to load class SQL.presentation.SQLModelWizard.
+SQL/presentation/SQLModelWizard has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+```
+
+This was due to Java Version Mismatch between the compiled classes and the runtime environment.
+
+- Class File Version 62.0 corresponds to Java 18.
+- Class File Version 61.0 corresponds to Java 17.
+
+My global `compiler compliance level` was set on Java 18, while in the genmodel, it was set to 5.0, causing issues with compliance levels in IDM.editor. Simply make sure to set compliance level according to the global one in the genmodel to fix the issue.
+
+Window > Preferences > Java > Compiler > Set Compiler Compliance to the one that matches your global one.
+
 ## Create the XML metamodel
 
 ## Creating the SQL text editor

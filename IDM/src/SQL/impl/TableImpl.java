@@ -71,6 +71,7 @@ public class TableImpl extends NamedElmtImpl implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Column> getColumns() {
 		if (columns == null) {
 			columns = new EObjectContainmentWithInverseEList<Column>(Column.class, this, SQLPackage.TABLE__COLUMNS, SQLPackage.COLUMN__TABLE);
@@ -83,6 +84,7 @@ public class TableImpl extends NamedElmtImpl implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DB getDb() {
 		if (eContainerFeatureID() != SQLPackage.TABLE__DB) return null;
 		return (DB)eInternalContainer();
@@ -103,6 +105,7 @@ public class TableImpl extends NamedElmtImpl implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDb(DB newDb) {
 		if (newDb != eInternalContainer() || (eContainerFeatureID() != SQLPackage.TABLE__DB && newDb != null)) {
 			if (EcoreUtil.isAncestor(this, newDb))

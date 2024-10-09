@@ -65,6 +65,7 @@ public class DBImpl extends NamedElmtImpl implements DB {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Table> getTables() {
 		if (tables == null) {
 			tables = new EObjectContainmentWithInverseEList<Table>(Table.class, this, SQLPackage.DB__TABLES, SQLPackage.TABLE__DB);

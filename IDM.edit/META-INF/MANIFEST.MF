@@ -8,7 +8,6 @@ Bundle-ClassPath: .
 Bundle-Activator: SQL.provider.SQLEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: SQL.provider
 Require-Bundle: org.eclipse.core.runtime,
  IDM;visibility:=reexport,

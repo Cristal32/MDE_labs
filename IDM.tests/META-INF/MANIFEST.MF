@@ -7,7 +7,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: SQL.tests
 Require-Bundle: org.eclipse.core.runtime,
  IDM;visibility:=reexport,

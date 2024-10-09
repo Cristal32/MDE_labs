@@ -69,6 +69,7 @@ public class SQLFactoryImpl extends EFactoryImpl implements SQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DB createDB() {
 		DBImpl db = new DBImpl();
 		return db;
@@ -79,6 +80,7 @@ public class SQLFactoryImpl extends EFactoryImpl implements SQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Table createTable() {
 		TableImpl table = new TableImpl();
 		return table;
@@ -89,6 +91,7 @@ public class SQLFactoryImpl extends EFactoryImpl implements SQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Column createColumn() {
 		ColumnImpl column = new ColumnImpl();
 		return column;
@@ -99,6 +102,7 @@ public class SQLFactoryImpl extends EFactoryImpl implements SQLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SQLPackage getSQLPackage() {
 		return (SQLPackage)getEPackage();
 	}

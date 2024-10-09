@@ -115,6 +115,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDB() {
 		return dbEClass;
 	}
@@ -124,6 +125,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDB_Tables() {
 		return (EReference)dbEClass.getEStructuralFeatures().get(0);
 	}
@@ -133,6 +135,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNamedElmt() {
 		return namedElmtEClass;
 	}
@@ -142,6 +145,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNamedElmt_Name() {
 		return (EAttribute)namedElmtEClass.getEStructuralFeatures().get(0);
 	}
@@ -151,6 +155,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTable() {
 		return tableEClass;
 	}
@@ -160,6 +165,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTable_Columns() {
 		return (EReference)tableEClass.getEStructuralFeatures().get(0);
 	}
@@ -169,6 +175,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTable_Db() {
 		return (EReference)tableEClass.getEStructuralFeatures().get(1);
 	}
@@ -178,6 +185,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getColumn() {
 		return columnEClass;
 	}
@@ -187,6 +195,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColumn_Type() {
 		return (EAttribute)columnEClass.getEStructuralFeatures().get(0);
 	}
@@ -196,6 +205,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getColumn_Table() {
 		return (EReference)columnEClass.getEStructuralFeatures().get(1);
 	}
@@ -205,6 +215,7 @@ public class SQLPackageImpl extends EPackageImpl implements SQLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SQLFactory getSQLFactory() {
 		return (SQLFactory)getEFactoryInstance();
 	}
