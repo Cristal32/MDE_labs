@@ -143,7 +143,7 @@ Alternatively, instead of having to generate every time whenever we make a chang
     - Root instance type: Choose whichever root you want, for example DB 
 4. You can now test it out directly
 
-Now whenever we make a change in the ecore, we can simply repeat step 1
+Now whenever we make a change in the ecore, we can simply repeat step 1.
 
 We can then start filling out an example of the model:
 <p align=center>
@@ -152,21 +152,20 @@ We can then start filling out an example of the model:
 
 ## Use the arborescent editor
 
-**Side Note**: An issue I encountered in this step, is at the start whenever I wanted to create a new SQL model, I encountered this error:
-```
-The selected wizard could not be started.
-Plug-in IDM.editor was unable to load class SQL.presentation.SQLModelWizard.
-SQL/presentation/SQLModelWizard has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 61.0
-```
+Now we'll want to test out our SQL model on a new Eclipse editor. 
 
-This was due to Java Version Mismatch between the compiled classes and the runtime environment.
+- Right click the project IDM > Run as > Eclipse Application
+- In the new Eclipse runtime, create a new General project: SQLExample
+- In SQLExample, create a new file > Other > Example EMF Model Creation Wizards > SQL Model > File name: My.sql > Next > Model Object: DB
+- You can start filling out the arborescent editor with a DB example of your liking
 
-- Class File Version 62.0 corresponds to Java 18.
-- Class File Version 61.0 corresponds to Java 17.
+<p align=center>
+    <img width="300px" src="../assets/model_runtime.PNG" alt="Arborescent editor" />
+</p>
 
-My global `compiler compliance level` was set on Java 18, while in the genmodel, it was set to 5.0, causing issues with compliance levels in IDM.editor. Simply make sure to set compliance level according to the global one in the genmodel to fix the issue.
+We can use Validate on each element of the arborescence.
 
-Window > Preferences > Java > Compiler > Set Compiler Compliance to the one that matches your global one.
+Now that the model is done, saved and successfully validated, we can close the runtime and access our original IDE.
 
 ## Create the XML metamodel
 
