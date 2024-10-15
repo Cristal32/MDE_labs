@@ -14,7 +14,7 @@ The goal of these initial exercises is to get familiar with the tools provided b
 
 - [Overview](#overview)
 - [Setup](#my-process)
-- [Creating the SQL metamodel](#creating-the-sql-metamodel) 
+- [SQL Metamodel](#sql-metamodel) 
     - [Starting off with SQL.ecore](#starting-off-with-sqlecore)
     - [Classes, attributes and references](#classes-attributes-and-references)
     - [Visualizing the diagram](#visualizing-the-diagram)
@@ -24,7 +24,7 @@ The goal of these initial exercises is to get familiar with the tools provided b
     - [Create the .genmodel file](#create-the-genmodel-file)
     - [Generate the 3 plugins](#generate-the-3-plugins)
 - [Use the arborescent editor](#use-the-arborescent-editor)
-- [Creating the XML metamodel](#creating-the-xml-metamodel)
+- [XML metamodel](#xml-metamodel)
 - [Creating the SQL text editor](#creating-the-sql-metamodel)
 
 ## Overview
@@ -41,7 +41,7 @@ The goal of these initial exercises is to get familiar with the tools provided b
 3. Change the perspective tab to `Ecore`
 4. File > New > Other > Empty EMF Project > Next > Name of project: IDM > Finish
 
-## Creating the SQL metamodel 
+## SQL Metamodel
 
 ### Starting off with SQL.ecore
 
@@ -167,7 +167,7 @@ We can use Validate on each element of the arborescence.
 
 Now that the model is done, saved and successfully validated, we can close the runtime and access our original IDE.
 
-## Create the XML metamodel
+## XML Metamodel
 
 ## Creating the SQL text editor
 
