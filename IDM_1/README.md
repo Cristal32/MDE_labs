@@ -24,7 +24,6 @@ The goal of these initial exercises is to get familiar with the tools provided b
     - [Create the .genmodel file](#create-the-genmodel-file)
     - [Generate the 3 plugins](#generate-the-3-plugins)
 - [Use the arborescent editor](#use-the-arborescent-editor)
-- [XML metamodel](#xml-metamodel)
 - [Creating the SQL text editor](#creating-the-sql-metamodel)
 
 ## Overview
@@ -167,7 +166,15 @@ We can use Validate on each element of the arborescence.
 
 Now that the model is done, saved and successfully validated, we can close the runtime and access our original IDE.
 
-## XML Metamodel
-
 ## Creating the SQL text editor
+
+For this you need to install the Xtext library from Eclipse Marketplace.
+
+1. Create a new project:
+File > Other > Xtext Project from existing ecore models > Next > Add SQL.genmodel & select the root of the metamodel  (DB) > define the name and extension of your choice for the language.
+2. You can then modify the grammar to your liking
+3. Right click the grammar > Run as > Generate Xtext artefacts
+4. Redo the steps from the step: [Generate the 3 plugins](#generate-the-3-plugins)
+
+
 
