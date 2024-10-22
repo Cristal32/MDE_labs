@@ -137,7 +137,7 @@ Alternatively, instead of having to generate every time whenever we make a chang
 **- Installation:**
 - Search `Epsilon Update Site`. You'll find this link: https://eclipse.dev/epsilon/download/
 - Go to the `Update Sites` section and copy the `Stable` URL: http://download.eclipse.org/epsilon/updates/2.5/
-- Go to your Eclipse >> Help >> Install New Software >> Paste the link and enter >> Next >> ...
+- Go to your Eclipse > Help > Install New Software > Paste the link and enter > Next > ...
 
 1. Right click SQL.ecore > Register EPackages
 2. Right click SQL.ecore > New > Other > Epsilon > EMF Model
