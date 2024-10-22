@@ -134,6 +134,11 @@ From this, 3 new layers of code (plugins) are generated:
 
 Alternatively, instead of having to generate every time whenever we make a change in the ecore file, we can install the package `epsilon`, which allows us to have a view of the resulting instance before generating. 
 
+**- Installation:**
+- Search `Epsilon Update Site`. You'll find this link: https://eclipse.dev/epsilon/download/
+- Go to the `Update Sites` section and copy the `Stable` URL: http://download.eclipse.org/epsilon/updates/2.5/
+- Go to your Eclipse >> Help >> Install New Software >> Paste the link and enter >> Next >> ...
+
 1. Right click SQL.ecore > Register EPackages
 2. Right click SQL.ecore > Epsilon > EMF Model
 3. EMF model:
