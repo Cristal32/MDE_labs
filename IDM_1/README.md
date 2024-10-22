@@ -190,4 +190,8 @@ Instead:
 3. Go to your project > build path > libraries > Classpath > Add External JARS > Select your installed JAR file > apply and close
 4. Then try again to generate the Xtext artefact
 
+<p align=center>
+    <img width="300px" src="../assets/text_editor.PNG" alt="Text editor" />
+</p>
+
 
