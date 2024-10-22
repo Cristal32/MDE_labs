@@ -140,7 +140,7 @@ Alternatively, instead of having to generate every time whenever we make a chang
 - Go to your Eclipse >> Help >> Install New Software >> Paste the link and enter >> Next >> ...
 
 1. Right click SQL.ecore > Register EPackages
-2. Right click SQL.ecore > Epsilon > EMF Model
+2. Right click SQL.ecore > New > Other > Epsilon > EMF Model
 3. EMF model:
     - File name: SQL.model
     - Metamodel URI > Browse > select your ecore URI
