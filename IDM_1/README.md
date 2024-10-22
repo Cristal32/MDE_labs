@@ -175,6 +175,14 @@ File > Other > Xtext Project from existing ecore models > Next > Add SQL.genmode
 2. You can then modify the grammar to your liking
 3. Right click the grammar > Run as > Generate Xtext artefacts
 4. Redo the steps from the step: [Generate the 3 plugins](#generate-the-3-plugins)
+5. In the runtime, create a new file test.mysdl > Accept to convert project into Xtext project > Ok
 
+### Side note
+A common problem that can occur in older versions of Eclipse is that we can't generate Xtext artefacts due to a missing `common-logging` library
+Instead:
+1. Go to build.properties and remove the line `org.apache.commons.common-logging`
+2. Go to [Commons logging maven website](https://mvnrepository.com/artifact/commons-logging/commons-logging/1.3.4) and install the .jar
+3. Go to your project > build path > libraries > Classpath > Add External JARS > Select your installed JAR file > apply and close
+4. Then try again to generate the Xtext artefact
 
 

@@ -9,8 +9,8 @@
         </tr>
         <tr>
             <td>01. </td>
-            <td>Metamodeling with Eclipse/EMF (Eclipse Modeling Framework)</td>
-            <td><a href="https://github.com/Cristal32/MDE_labs/tree/main/IDM">IDM</a></td>
+            <td>Metamodeling with Eclipse/EMF for the manipulation of relational database models</td>
+            <td><a href="https://github.com/Cristal32/MDE_labs/tree/main/IDM">IDM_1</a></td>
         </tr>
     </table>
 </div>
