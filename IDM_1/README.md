@@ -30,7 +30,7 @@ The goal of these initial exercises is to get familiar with the tools provided b
 
 <p align=center>
     <img width="200px" src="../assets/ecore_arborescence.PNG" alt="Ecore arborescence" />
-    <img width="310px" src="../assets/ecore_diagram.PNG" alt="Ecore arborescence" />
+    <img width="310px" src="../assets/ecore_diagram.PNG" alt="Ecore model diagram" />
 </p>
 
 ## Setup

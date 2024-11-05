@@ -16,13 +16,26 @@ gen/
 *.jar
 *.war
 
-# Maven-related (if using Maven for the project)
+# Ignore MWE2 workflow-generated code
+/src-gen/
+/xtend-gen/
+/model-gen/
+
+# Maven-related 
+/.mvn/
 target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
+
+# Ignore Xtext index and other generated artifacts
+/.xtext/
+/.idea/
+*.iml
+*.ipr
+*.iws
 
 # Ignore build artifacts from Gradle (if using Gradle)
 .gradle/

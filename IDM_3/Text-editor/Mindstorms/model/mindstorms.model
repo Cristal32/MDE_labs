@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mindstorms:Choreography xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mindstorms="https://cristal-mindstorms.ma" xmi:id="_FXLMgJtiEe-rDaEelOVpHA">
+  <instructions xsi:type="mindstorms:GoForward" xmi:id="_NMrwMJtiEe-rDaEelOVpHA" cm="2"/>
+  <instructions xsi:type="mindstorms:Grab" xmi:id="_PMlycJtiEe-rDaEelOVpHA"/>
+  <instructions xsi:type="mindstorms:Rotate" xmi:id="_RS8a8JtiEe-rDaEelOVpHA" degrees="180"/>
+  <instructions xsi:type="mindstorms:GoForward" xmi:id="_WiSNoJtiEe-rDaEelOVpHA" cm="2"/>
+  <instructions xsi:type="mindstorms:Release" xmi:id="_XrFBsJtiEe-rDaEelOVpHA"/>
+</mindstorms:Choreography>
